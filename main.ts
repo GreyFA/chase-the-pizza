@@ -1,22 +1,9 @@
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    bost = 20000
-    pause(bost)
-    game.showLongText("Are you shor you want to bost? This will take 5 sec away. press A to get the bost. press anewaer to cansl.", DialogLayout.Bottom)
-    if (controller.A.isPressed()) {
-    	
-    } else if (controller.B.isPressed()) {
-    	
-    } else {
-    	
-    }
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     pizza.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
     time += -5
     info.changeScoreBy(1)
     info.startCountdown(time)
 })
-let bost = 0
 let pizza: Sprite = null
 let time = 0
 time = 60
