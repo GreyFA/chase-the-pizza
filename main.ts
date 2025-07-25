@@ -1,3 +1,11 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    let Boost = 0
+    if (Boost == 0) {
+        game.showLongText(game.ask("Are you shor you want to bost? This will take 5 sec away. press A to get the bost. press anewaer to cansl."), DialogLayout.Center)
+    } else {
+    	
+    }
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     pizza.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
     time += -5
@@ -46,4 +54,4 @@ pizza = sprites.create(img`
     4 d d d 4 4 4 . . . . . . . . . 
     4 4 4 4 . . . . . . . . . . . . 
     `, SpriteKind.Food)
-pizza.setPosition(68, 24)
+null.setPosition(68, 24)
